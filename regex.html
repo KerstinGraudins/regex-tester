@@ -44,7 +44,7 @@ For phishing scams by phone, fax or mail, call 1-800-366-4484.
    $("#answers").append("instances of tax: " + result  + "<br>");
     
       //  - Display all phone #'s
-      var phone = str.match(/\d\W\d{3}\W\d{3,4}\W\d{4}/g);
+    var phone = str.match(/\d\W\(?\d{3}\)?\W\d{3,4}\W\d{4}/g);
    $("#answers").append("phone numbers are: " + phone  + "<br>");
     
        // - Display all IRS forms & publications
@@ -52,7 +52,7 @@ For phishing scams by phone, fax or mail, call 1-800-366-4484.
           $("#answers").append("IRS forms: " + irs  + "<br>");
           
        // - Update all web addresses to clickable urls by adding 'http://'
- $("#content").html(str.replace("www", "http://www")); 
+ $("#content").html(str.replace("www","http://www")); 
         });
             
         </script>
